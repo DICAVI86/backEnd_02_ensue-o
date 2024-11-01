@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "id": 1730493071748,
+    "titulo": "Zombie",
+    "artista": "Cranberries",
+    "tono": "La"
+  },
+  {
+    "id": 1730493094015,
+    "titulo": "Lalala",
+    "artista": "Los amigos Cantores",
+    "tono": "Do"
+  },
+  {
+    "id": 1730493117200,
+    "titulo": "Los flatos divertidos",
+    "artista": "Los Garganta",
+    "tono": "Re"
+  }
+]
