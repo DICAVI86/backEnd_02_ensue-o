@@ -113,10 +113,7 @@
   }
 
   function nuevaCancion() {
-    cancion;
-    artista;
-    tono;
-    const id = Math.floor(Math.random() * 9999)
+    const id = Math.floor(Math.random() * 9999);
     let data = {
       id,
       titulo: cancion.value,
@@ -124,8 +121,15 @@
       tono: tono.value,
     };
     console.log(data);
-    axios.post(url, data).then(() => getData());
+    axios.post(url, data).then(() => {
+      getData();
+      //Limpiar
+      cancion.value = "";
+      artista.value = ""; 
+      tono.value = ""; 
+    });
   }
+
 
   function eliminarCancion(i, id) {
     axios.delete(url + "/" + id).then(() => {
@@ -157,6 +161,10 @@
         getData();
         document.getElementById("agregar").style.display = "block";
         document.getElementById("editar").style.display = "none";
+        //Limpiar
+        cancion.value = "";
+        artista.value = "";
+        tono.value = ""; 
       });
   }
 </script>
